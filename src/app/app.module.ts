@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { LoaderComponent } from './loader/loader.component';
+import { PagesModule } from './pages/pages.module';
+// PagesModule
 
 @NgModule({
   declarations: [
@@ -15,6 +17,7 @@ import { LoaderComponent } from './loader/loader.component';
   ],
   imports: [
     BrowserModule,
+    PagesModule,
     AppRoutingModule,
     NgbModule
   ],

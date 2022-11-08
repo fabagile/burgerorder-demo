@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CATEGORIES, MENUS } from './meals-mock';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-burger-evenfurther';
+  menus = MENUS;
+  // list:Menu[]
+  categories = CATEGORIES
+  items = undefined;
 }
