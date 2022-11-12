@@ -1,4 +1,25 @@
 import { Category, Menu } from "./mealTypes";
+import { Ingredient, Burger } from "./ingredient";
+
+const salad = new Ingredient("Salade");
+const tomato = new Ingredient("Tomate");
+const ketchup = new Ingredient("Ketchup");
+const gherkin = new Ingredient("Cornichon");
+const cheese = new Ingredient("Fromage");
+const mayonnaise = new Ingredient("Mayonnaise");
+const bacon = new Ingredient("Bacon");
+const burger = new Ingredient("Burger");
+const fish = new Ingredient("Poisson Pané");
+const doubleBurger = new Ingredient("Double Burger");
+const chicken = new Ingredient("Poulet Frit");
+
+const classicBurger = new Burger("Classic", [burger, salad, tomato, gherkin])
+const baconBurger = new Burger("Bacon", [burger, cheese, bacon, salad, tomato])
+const bigBurger = new Burger("Big Burger", [doubleBurger, cheese, gherkin, tomato])
+const chickenBurger = new Burger("Chicken", [chicken, tomato, salad, mayonnaise])
+const fishBurger = new Burger("Fish", [fish, salad, mayonnaise, gherkin])
+const doubleSteakBurger = new Burger("Double Steak", [doubleBurger, salad, mayonnaise, gherkin])
+
 
 export const MENUS:Menu[] = [
   {

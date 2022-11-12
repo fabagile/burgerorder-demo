@@ -5,11 +5,14 @@ import { DetailComponent } from './detail/detail.component';
 import { TwoDecimalsPipe } from './two-decimals.pipe';
 import { RouterModule } from '@angular/router';
 import { ListComponent } from './list/list.component';
+import { CartComponent } from './cart/cart.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 ListComponent
 
 const routes = [
   { path: 'menu', component: ListComponent },
+  { path: 'menu/cart', component: CartComponent },
   { path: 'dish/:id', component: DetailComponent },
 ];
 
@@ -21,8 +24,8 @@ const routes = [
   // imports: [
   //   CommonModule
   // ]
-  declarations: [TwoDecimalsPipe, ListComponent, DetailComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  declarations: [TwoDecimalsPipe, ListComponent, DetailComponent, CartComponent],
+  imports: [CommonModule, RouterModule.forChild(routes), NgbModule],
   // providers: [MenuService],
 })
 export class PagesModule { }

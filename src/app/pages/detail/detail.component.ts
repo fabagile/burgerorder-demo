@@ -8,7 +8,7 @@ import { Menu } from 'src/app/mealTypes';
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.css']
+  // styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
   menus= MENUS

@@ -1,13 +1,25 @@
 <div class="container site">
   <h1 class="text-logo">
     <i class="fa-solid fa-utensils"></i>
-    <span class="my-5"> Burger Code </span>
+    <span class="my-5 mx-3">{{title}}</span>
     <i class="fa-solid fa-sharp fa-utensils"></i>
     <!-- <span class="glyphicon glyphicon-cutlery"></span> -->
     <!-- <i class="material-icons">silverware-fork-knife</i> -->
   </h1>
+  <!-- <h2 class="fs-4 text-bg-primary">(restaurant mock cart)</h2> -->
   </div>
   <div class="container">
+    
+    <router-outlet></router-outlet>
 
-    <router-outlet ></router-outlet>
+
   </div>
+  <footer class="d-flex gap-4 justify-content-center footer text-center text-light p-3" >
+    <div class="">fabagile @ {{date | date:"yyyy"}}</div>
+    <!-- <div class=""> -->
+      <a class="nav-link text-light" href="https://github.com/fabagile/ng-burger-code" target="_blank" ><i class="fa-brands fa-github fa-xl me-2" ></i>code source</a>
+      
+    <!-- </div> -->
+    <!-- <p>footer works!</p> -->
+
+</footer>

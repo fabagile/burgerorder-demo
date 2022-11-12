@@ -15,6 +15,9 @@ export class ListComponent implements OnInit {
   // list:Menu[]
   categories = CATEGORIES
   items:Menu[] = []
+
+  cart:Menu[] = []
+  // category = {}
   // this.categories[1].isActive = true
   
   constructor(private router:Router) { 
@@ -23,6 +26,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.items = this.menus.filter(item=> this.categories[item.id])
+    // this.category = this.categories.filter(cat => )
   }
   goToDish(id:number) {
     console.log(id)
@@ -39,6 +43,16 @@ export class ListComponent implements OnInit {
     console.log(this.items)
     // this.active = "active"
     return this.items
+  }
+  addToCart(item:Menu) {
+    
+    // console.log()
+    this.cart = [...this.cart, item]
+    console.log("panier: ")
+    console.table(this.cart)
+  }
+  goToCart() {
+    this.router.navigate(["/menu/cart"])
   }
 
   // constructor() { }

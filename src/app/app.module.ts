@@ -7,19 +7,22 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { LoaderComponent } from './loader/loader.component';
 import { PagesModule } from './pages/pages.module';
+import { LayoutModule } from './layout/layout.module';
+// LayoutModule
 // PagesModule
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorPageComponent,
-    LoaderComponent
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
     PagesModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
